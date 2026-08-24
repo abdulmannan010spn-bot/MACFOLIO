@@ -12,7 +12,7 @@ const Dock = () => {
         {dockApps.map(({id,name,icon,canOpen})=>(
             <div key={id} className="relative flex justify-center">
                 <button type="button"
-                className="dock-icon"
+                className="dock-icon transition-all duration-300 hover:-translate-y-5 hover:scale-100"
                 aria-label={name}
                 data-tooltip-id ="dock-tooltip"
                 data-tooltip-content={name}
