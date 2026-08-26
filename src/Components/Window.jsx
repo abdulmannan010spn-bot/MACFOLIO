@@ -10,10 +10,11 @@ function Window() {
       id="welcome"
       ref={containerRef}
       style={{ position: "relative", minHeight: "300px" }}
+      
     >
       <VariableProximity
         label="Hey, welcome to my"
-        className="text-lg font-bold italic"
+        className="text-lg font-bold italic mb-5"
         fromFontVariationSettings="'wght' 400, 'opsz' 9"
         toFontVariationSettings="'wght' 1000, 'opsz' 40"
         containerRef={containerRef}
@@ -23,7 +24,7 @@ function Window() {
 
       <VariableProximity2
         label="Portfolio"
-        className="text-9xl mt-6"
+        className="text-9xl mb-35"
         fromFontVariationSettings="'wght' 100"
         toFontVariationSettings="'wght' 500"
         fromStrokeWidth={0}

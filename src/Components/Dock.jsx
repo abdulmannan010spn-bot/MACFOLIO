@@ -11,12 +11,21 @@ const Dock = () => {
       if(!app.canOpen) return;
 
       const window = windows[app.id];
-      if(window.isOpen){
-        closeWindow(app.id)
-      }else{
-        openWindow(app.id)
+
+      if(!window){
+        console.error(`Dock: no window state found for app id "${app.id}". Check that it exists in the window store / dockApps config.`);
+        return;
       }
-      console.log(app)
+
+      try{
+        if(window.isOpen){
+          closeWindow(app.id)
+        }else{
+          openWindow(app.id)
+        }
+      }catch(err){
+        console.error(`Dock: failed to toggle window for app id "${app.id}"`, err);
+      }
     }
   return (
     <section id="dock">
