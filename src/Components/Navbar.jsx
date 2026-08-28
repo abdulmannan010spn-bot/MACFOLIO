@@ -1,6 +1,8 @@
 import { navIcons, navLinks } from "../Constants"
+import useWindowStore from "../Stores/Window"
 
 const Navbar = () => {
+    const {openWindow} = useWindowStore()
   return (
     <nav>
 
@@ -11,8 +13,8 @@ const Navbar = () => {
             </p>
 
             <ul>
-                {navLinks.map(({id,name})=>(
-                    <li key={id}>
+                {navLinks.map(({id,name,type})=>(
+                    <li key={id} onClick={() => openWindow(type)}>
                         <p>{name}</p>
                     </li>
                 ))}

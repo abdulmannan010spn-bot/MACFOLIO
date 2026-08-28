@@ -1,6 +1,28 @@
+
+import { Download } from "lucide-react"
+import WindowControls from "../Components/WindowControls"
+import WindowWrapper from "../Hoc/WindowWrapper"
+
 const Resume = () => {
   return (
-    <div>Resume</div>
+    <>
+    <div id="window-header">
+        <WindowControls target="resume"/>
+        <h2>Resume.pdf</h2>
+
+        <a href="file/resume.pdf" download className="cursor-pointer" title="Download resume">
+        
+        <Download className="icon" />
+        </a>
+    </div>
+    <div className="">
+        <img src="/files/resume.jpg" className="object-cover" alt="" />
+    </div>
+
+    </>
   )
 }
-export default Resume
+
+const ResumeWindow = WindowWrapper(Resume ,'resume')
+
+export default ResumeWindow
