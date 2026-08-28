@@ -1,12 +1,17 @@
 import {
   ChevronLeft,
   ChevronRight,
+  Copy,
+  MoveLeft,
   PanelLeft,
+  Plus,
   Search,
+  Share,
   ShieldHalf,
 } from "lucide-react";
 import WindowControls from "../Components/WindowControls";
 import WindowWrapper from "../Hoc/WindowWrapper";
+import { blogPosts } from "../Constants";
 
 const Safari = () => {
   return (
@@ -32,6 +37,31 @@ const Safari = () => {
               className="flex-1"
             />
           </div>
+        </div>
+        <div className="flex items-center gap-5">
+            <Share className="icon" />
+            <Plus className="icon" />
+            <Copy className="icon" />
+        </div>
+      </div>
+
+      <div className="blog">
+        <h2>My Developer Blog</h2>
+        <div className="space-y-8">
+            {blogPosts.map(({id,image,title,date,link})=>(
+                <div key={id} className="blog-post">
+                    <div className="col-span-2">
+                        <img src={image} alt={title} />
+                    </div>
+                    <div className="content">
+                        <p>{date}</p>
+                        <h2>{title}</h2>
+                        <a href={link} target="_blank" rel="noopener">
+                            Check out the full post <MoveLeft className="icon-hover" />
+                        </a>
+                    </div>
+                </div>
+            ))}
         </div>
       </div>
     </>
