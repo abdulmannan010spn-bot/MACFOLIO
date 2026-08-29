@@ -27,8 +27,6 @@ function Window() {
         className="text-9xl mb-35"
         fromFontVariationSettings="'wght' 100"
         toFontVariationSettings="'wght' 500"
-        fromStrokeWidth={0}
-        toStrokeWidth={1.5}
         containerRef={containerRef}
         radius={200}
         falloff="linear"

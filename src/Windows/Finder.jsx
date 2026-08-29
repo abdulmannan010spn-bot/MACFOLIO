@@ -7,14 +7,21 @@ import clsx from "clsx";
 import useWindowStore from "../Stores/Window";
 
 const Finder = () => {
-  const {openWindow} = useWindowStore()
+  const { openWindow } = useWindowStore();
   const { activeLocation, setActiveLocation } = useLocationStore();
 
   const openItem = (item) => {
-    if(item.fileType === "pdf") return openWindow("resume")
+  if (item.fileType === "pdf") return openWindow("resume");
 
-      if(item.kind === "folder") return setActiveLocation(item)
-  }
+  if (item.kind === "folder") return setActiveLocation(item);
+
+  if (item.fileType === "txt") return openWindow("txtfile", item);
+
+  if (item.fileType === "img") return openWindow("imgfile", item);
+
+  if (["fig", "url"].includes(item.fileType) && item.href)
+    return window.open(item.href, "_blank");
+};
 
   return (
     <>
@@ -47,7 +54,7 @@ const Finder = () => {
           </div>
           <div>
             <h3>My Projects</h3>
-           <ul>
+            <ul>
               {locations.work.children.map((item) => (
                 <li
                   key={item.id}
@@ -66,17 +73,18 @@ const Finder = () => {
           </div>
         </div>
         <ul className="content">
-        {activeLocation?.children.map((item) => (
-          <li key={item.id} className={item.position} onClick={() => openItem(item)}>
-            <img src={item.icon} alt={item.name} />
-            <p>{item.name}</p>
-
-          </li>
-        ))}
-      </ul>
+          {activeLocation?.children.map((item) => (
+            <li
+              key={item.id}
+              className={item.position}
+              onClick={() => openItem(item)}
+            >
+              <img src={item.icon} alt={item.name} />
+              <p>{item.name}</p>
+            </li>
+          ))}
+        </ul>
       </div>
-
-      
     </>
   );
 };
