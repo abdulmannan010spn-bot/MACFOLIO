@@ -9,6 +9,7 @@ import Resume from "./Windows/Resume"
 import Finder from "./Windows/Finder"
 import Text from "./Windows/Text"
 import ImagesContent from "./Windows/ImagesContent"
+import Contact from "./Windows/Contact"
 
 gsap.registerPlugin(Draggable)
 
@@ -24,6 +25,7 @@ const App = () => {
       <Finder />
       <Text />
       <ImagesContent />
+      <Contact />
     </main>
   )
 }
