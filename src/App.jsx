@@ -11,12 +11,15 @@ import Text from "./Windows/Text"
 import ImagesContent from "./Windows/ImagesContent"
 import Contact from "./Windows/Contact"
 import Home from "./Components/Home"
+import MobileBlocker from "./Components/MobileBlocker"
 
 gsap.registerPlugin(Draggable)
 
 const App = () => {
   return (
     <main>
+      
+      <MobileBlocker />
       <Navbar />
       <Window />
       <Dock />

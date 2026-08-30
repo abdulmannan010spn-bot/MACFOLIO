@@ -5,6 +5,11 @@ const navLinks = [
     type: "finder",
   },
   {
+    id: 2,
+    name: "About Me",
+    type: "about",
+  },
+  {
     id: 3,
     name: "Contact",
     type: "contact",
@@ -38,37 +43,37 @@ const navIcons = [
 const dockApps = [
   {
     id: "finder",
-    name: "Portfolio", // was "Finder"
+    name: "Portfolio",
     icon: "finder.png",
     canOpen: true,
   },
   {
     id: "safari",
-    name: "Articles", // was "Safari"
+    name: "Articles",
     icon: "safari.png",
     canOpen: true,
   },
   {
     id: "photos",
-    name: "Gallery", // was "Photos"
+    name: "Gallery",
     icon: "photos.png",
     canOpen: true,
   },
   {
     id: "contact",
-    name: "Contact", // or "Get in touch"
+    name: "Contact",
     icon: "contact.png",
     canOpen: true,
   },
   {
     id: "terminal",
-    name: "Skills", // was "Terminal"
+    name: "Skills",
     icon: "terminal.png",
     canOpen: true,
   },
   {
     id: "trash",
-    name: "Archive", // was "Trash"
+    name: "Archive",
     icon: "trash.png",
     canOpen: false,
   },
@@ -77,44 +82,43 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
+    date: "2026",
+    title: "My Journey in Open Source and Web Development",
     image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    link: "#",
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
+    date: "2026",
+    title: "Building Modern React Websites with Tailwind CSS",
     image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    link: "#",
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
+    date: "2026",
+    title: "Creating Interactive Web Experiences with GSAP",
     image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    link: "#",
   },
 ];
 
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    items: ["HTML", "CSS", "JavaScript", "React.js"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["Tailwind CSS", "CSS", "Figma"],
+  },
+  {
+    category: "Animation",
+    items: ["GSAP", "Framer Motion"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express"],
   },
   {
     category: "Database",
@@ -122,38 +126,38 @@ const techStack = [
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: ["Git", "GitHub", "Vite", "npm"],
   },
 ];
 
 const socials = [
   {
     id: 1,
-    text: "Github",
+    text: "GitHub",
     icon: "/icons/github.svg",
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "#",
   },
   {
     id: 2,
-    text: "Platform",
-    icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
-  },
-  {
-    id: 3,
-    text: "Twitter/X",
-    icon: "/icons/twitter.svg",
-    bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
-  },
-  {
-    id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    link: "#",
+  },
+  {
+    id: 3,
+    text: "Instagram",
+    icon: "/icons/instagram.svg",
+    bg: "#ff866b",
+    link: "#",
+  },
+  {
+    id: 4,
+    text: "Figma",
+    icon: "/icons/figma.svg",
+    bg: "#4bcb63",
+    link: "#",
   },
 ];
 
@@ -171,7 +175,7 @@ const photosLinks = [
   {
     id: 3,
     icon: "/icons/file.svg",
-    title: "Places",
+    title: "Projects",
   },
   {
     id: 4,
@@ -215,167 +219,191 @@ export {
   gallery,
 };
 
+
+/* =========================================================
+   WORK / PROJECTS
+========================================================= */
+
 const WORK_LOCATION = {
   id: 1,
   type: "work",
-  name: "Work",
+  name: "Projects",
   icon: "/icons/work.svg",
   kind: "folder",
+
   children: [
+
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "Sonata Watch Website",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      position: "top-10 left-5",
+      windowPosition: "top-[5vh] left-5",
+
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "Sonata Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
+
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "Sonata is a modern watch website designed with a premium and elegant visual experience.",
+            "The website focuses on clean layouts, product presentation, smooth interactions, and responsive design.",
+            "The project combines modern frontend development with UI/UX design to create a polished watch-shopping experience.",
+            "The interface was built with React and modern web technologies with a strong focus on visual quality and responsiveness.",
           ],
         },
+
         {
           id: 2,
-          name: "nike.com",
+          name: "sonata.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+          href: "#",
           position: "top-10 right-20",
         },
+
         {
           id: 4,
-          name: "nike.png",
+          name: "sonata.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/project-1.png",
         },
+
         {
           id: 5,
           name: "Design.fig",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
-          href: "https://google.com",
+          href: "#",
           position: "top-60 right-20",
         },
       ],
     },
 
+
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "3D Portfolio",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
       windowPosition: "top-[20vh] left-7",
+
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "3D Portfolio Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
+
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "A creative 3D portfolio experience designed to showcase my development, design, and creative work.",
+            "The project combines React with interactive 3D elements to create an immersive portfolio experience.",
+            "It focuses on animations, interactive components, modern UI, and responsive layouts.",
+            "The project explores technologies such as React Three Fiber, Drei, GSAP, and Tailwind CSS.",
           ],
         },
+
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "3d-portfolio.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+          href: "#",
           position: "top-20 left-20",
         },
+
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "3d-portfolio.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
           imageUrl: "/images/project-2.png",
         },
+
         {
           id: 5,
           name: "Design.fig",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
-          href: "https://google.com",
+          href: "#",
           position: "top-60 left-5",
         },
       ],
     },
 
+
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "Legal Metrology AI",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
       windowPosition: "top-[33vh] left-7",
+
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "SIH26034 Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
+
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+            "A software solution for checking compliance of packaged commodities under the Legal Metrology (Packaged Commodities) Rules, 2011.",
+            "The system is designed to scan product images and labels and extract important information from the packaging.",
+            "The extracted information can then be checked against required Legal Metrology rules.",
+            "The goal is to reduce manual inspection effort and provide a faster and more systematic compliance-checking process.",
           ],
         },
+
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "legal-metrology-ai.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          href: "#",
           position: "top-10 right-20",
         },
+
         {
           id: 4,
-          name: "food-delivery-app.png",
+          name: "legal-metrology.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/project-3.png",
         },
+
         {
           id: 5,
           name: "Design.fig",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
-          href: "https://google.com",
+          href: "#",
           position: "top-60 right-20",
         },
       ],
@@ -383,13 +411,20 @@ const WORK_LOCATION = {
   ],
 };
 
+
+/* =========================================================
+   ABOUT ME
+========================================================= */
+
 const ABOUT_LOCATION = {
   id: 2,
   type: "about",
-  name: "About me",
+  name: "About Me",
   icon: "/icons/info.svg",
   kind: "folder",
+
   children: [
+
     {
       id: 1,
       name: "me.png",
@@ -397,8 +432,9 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/me.jpg",
     },
+
     {
       id: 2,
       name: "casual-me.png",
@@ -406,8 +442,9 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/me-2.jpg",
     },
+
     {
       id: 3,
       name: "conference-me.png",
@@ -415,8 +452,9 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/me-3.jpeg",
     },
+
     {
       id: 4,
       name: "about-me.txt",
@@ -424,17 +462,30 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "txt",
       position: "top-60 left-5",
-      subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+
+      subtitle: "Meet Abdul Mannan",
+
+      image: "/images/me.jpg",
+
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Hey! I'm Abdul Mannan 👋, a Computer Science student and developer who enjoys building modern, interactive, and visually polished digital experiences.",
+
+        "I work with technologies such as HTML, CSS, JavaScript, React, Tailwind CSS, GSAP, and modern frontend tools.",
+
+        "I enjoy combining development with UI/UX design and Figma to create websites that are not only functional but also visually engaging.",
+
+        "I'm also involved with the Open Source Software and Research & Development Centre (OSS/OSSR&DC), where I explore open source, development, and collaborative projects.",
+
+        "Outside development, I enjoy design, video editing, cricket, and experimenting with new creative ideas.",
       ],
     },
   ],
 };
+
+
+/* =========================================================
+   RESUME
+========================================================= */
 
 const RESUME_LOCATION = {
   id: 3,
@@ -442,38 +493,47 @@ const RESUME_LOCATION = {
   name: "Resume",
   icon: "/icons/file.svg",
   kind: "folder",
+
   children: [
     {
       id: 1,
-      name: "Resume.pdf",
+      name: "Abdul-Mannan-Resume.pdf",
       icon: "/images/pdf.png",
       kind: "file",
       fileType: "pdf",
-      // you can add `href` if you want to open a hosted resume
-      // href: "/your/resume/path.pdf",
+
+      // Add your resume path here
+      // href: "/resume/Abdul-Mannan-Resume.pdf",
     },
   ],
 };
 
+
+/* =========================================================
+   ARCHIVE / TRASH
+========================================================= */
+
 const TRASH_LOCATION = {
   id: 4,
   type: "trash",
-  name: "Trash",
+  name: "Archive",
   icon: "/icons/trash.svg",
   kind: "folder",
+
   children: [
     {
       id: 1,
-      name: "trash1.png",
+      name: "old-project.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-10 left-10",
       imageUrl: "/images/trash-1.png",
     },
+
     {
       id: 2,
-      name: "trash2.png",
+      name: "old-design.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
@@ -483,6 +543,7 @@ const TRASH_LOCATION = {
   ],
 };
 
+
 export const locations = {
   work: WORK_LOCATION,
   about: ABOUT_LOCATION,
@@ -490,17 +551,64 @@ export const locations = {
   trash: TRASH_LOCATION,
 };
 
+
+/* =========================================================
+   WINDOW CONFIG
+========================================================= */
+
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  finder: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+
+  contact: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+
+  resume: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+
+  safari: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+
+  photos: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+
+  terminal: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+
+  txtfile: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+
+  imgfile: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
 };
 
-export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+export {
+  INITIAL_Z_INDEX,
+  WINDOW_CONFIG,
+};
