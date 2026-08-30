@@ -5,11 +5,6 @@ const navLinks = [
     type: "finder",
   },
   {
-    id: 2,
-    name: "About Me",
-    type: "about",
-  },
-  {
     id: 3,
     name: "Contact",
     type: "contact",
@@ -82,23 +77,25 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "2026",
-    title: "My Journey in Open Source and Web Development",
-    image: "/images/blog1.png",
+    date: "Aug 30, 2026",
+    title: "My Journey as a Computer Science Student and Developer",
+    image: "/images/react.png",
     link: "#",
   },
   {
     id: 2,
-    date: "2026",
-    title: "Building Modern React Websites with Tailwind CSS",
-    image: "/images/blog2.png",
+    date: "Aug 2026",
+    title:
+      "My Journey with Open Source Software & Research and Development Centre",
+    image: "/images/oss.png",
     link: "#",
   },
   {
     id: 3,
-    date: "2026",
-    title: "Creating Interactive Web Experiences with GSAP",
-    image: "/images/blog3.png",
+    date: "Aug 2026",
+    title:
+      "What I Learned Building Projects with React, JavaScript & Modern Web Technologies",
+    image: "/images/3js.png",
     link: "#",
   },
 ];
@@ -106,61 +103,60 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React.js"],
+    items: ["React.js", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    category: "3D Web",
+    items: ["Three.js", "React Three Fiber"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "CSS", "Figma"],
+    items: ["Tailwind CSS", "CSS"],
+  },
+  {
+    category: "Programming",
+    items: ["Java", "JavaScript"],
   },
   {
     category: "Animation",
-    items: ["GSAP", "Framer Motion"],
+    items: ["GSAP", "ScrollTrigger"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express"],
-  },
-  {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
-  },
-  {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Vite", "npm"],
+    category: "Designing",
+    items: ["Figma", "Git", "GitHub", "VS Code"],
   },
 ];
 
 const socials = [
   {
     id: 1,
-    text: "GitHub",
-    icon: "/icons/github.svg",
+    text: "Github",
+    icon: "https://api.iconify.design/mdi:github.svg?color=white",
     bg: "#f4656b",
-    link: "#",
+    link: "https://github.com/abdulmannan010spn-bot",
   },
   {
     id: 2,
-    text: "LinkedIn",
-    icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
-    link: "#",
+    text: "Instagram",
+    icon: "https://api.iconify.design/mdi:instagram.svg?color=white",
+    bg: "#4bcb63",
+    link: "https://www.instagram.com/mai_mannan_hoon",
   },
   {
     id: 3,
-    text: "Instagram",
-    icon: "/icons/instagram.svg",
+    text: "LeetCode",
+    icon: "https://api.iconify.design/simple-icons:leetcode.svg?color=white",
     bg: "#ff866b",
-    link: "#",
+    link: "https://leetcode.com/u/MAI_MANNAN_HOON_10/",
   },
   {
     id: 4,
-    text: "Figma",
-    icon: "/icons/figma.svg",
-    bg: "#4bcb63",
-    link: "#",
+    text: "LinkedIn",
+    icon: "https://api.iconify.design/mdi:linkedin.svg?color=white",
+    bg: "#05b6f6",
+    link: "https://www.linkedin.com/in/abdul-mannan-537494375",
   },
 ];
-
 const photosLinks = [
   {
     id: 1,
@@ -175,7 +171,7 @@ const photosLinks = [
   {
     id: 3,
     icon: "/icons/file.svg",
-    title: "Projects",
+    title: "Places",
   },
   {
     id: 4,
@@ -192,19 +188,19 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/gallery2.jpeg",
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: "/images/gallery3.jpeg",
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: "/images/gallery4.jpeg",
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: "/images/gallery5.jpeg",
   },
 ];
 
@@ -219,24 +215,17 @@ export {
   gallery,
 };
 
-
-/* =========================================================
-   WORK / PROJECTS
-========================================================= */
-
 const WORK_LOCATION = {
   id: 1,
   type: "work",
-  name: "Projects",
+  name: "Work",
   icon: "/icons/work.svg",
   kind: "folder",
-
   children: [
-
     // ▶ Project 1
     {
       id: 5,
-      name: "Sonata Watch Website",
+      name: "Sonata Website Application",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5",
@@ -252,10 +241,11 @@ const WORK_LOCATION = {
           position: "top-5 left-10",
 
           description: [
-            "Sonata is a modern watch website designed with a premium and elegant visual experience.",
-            "The website focuses on clean layouts, product presentation, smooth interactions, and responsive design.",
-            "The project combines modern frontend development with UI/UX design to create a polished watch-shopping experience.",
-            "The interface was built with React and modern web technologies with a strong focus on visual quality and responsiveness.",
+            "Sonata is a modern luxury watch website designed to showcase premium timepieces through an elegant and immersive digital experience.",
+            "The website focuses on sophisticated visuals, clean typography, smooth interactions, and a premium shopping experience inspired by modern luxury brands.",
+            "It features curated watch collections, premium products, brand storytelling, craftsmanship, and a responsive interface designed for desktop, tablet, and mobile devices.",
+            "The project was built with React and Tailwind CSS, with a strong focus on reusable components, responsive layouts, smooth animations, and modern UI/UX.",
+            "The website presents Sonata as a premium watch brand while keeping the browsing experience simple, refined, and visually engaging.",
           ],
         },
 
@@ -265,7 +255,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "#",
+          href: "https://sonata-eta.vercel.app/",
           position: "top-10 right-20",
         },
 
@@ -276,26 +266,26 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
+          imageUrl: "/images/sona.png",
         },
 
         {
           id: 5,
-          name: "Design.fig",
+          name: "Sonata Design.fig",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
-          href: "#",
+          href: "https://www.figma.com/",
           position: "top-60 right-20",
         },
       ],
     },
 
-
     // ▶ Project 2
+
     {
       id: 6,
-      name: "3D Portfolio",
+      name: "Apple 3D Website",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -304,17 +294,78 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "3D Portfolio Project.txt",
+          name: "Apple 3D Website Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
 
           description: [
-            "A creative 3D portfolio experience designed to showcase my development, design, and creative work.",
-            "The project combines React with interactive 3D elements to create an immersive portfolio experience.",
-            "It focuses on animations, interactive components, modern UI, and responsive layouts.",
-            "The project explores technologies such as React Three Fiber, Drei, GSAP, and Tailwind CSS.",
+            "Apple 3D Website is an immersive and interactive web experience inspired by Apple's minimal and premium design language.",
+            "The website combines modern UI design with interactive 3D elements to create a visually engaging product experience.",
+            "It features a responsive layout, smooth animations, interactive 3D models, and carefully designed sections inspired by Apple's product presentation style.",
+            "The 3D experience is powered by React Three Fiber and Three.js, allowing users to interact with and explore 3D objects directly in the browser.",
+            "Built with React and Tailwind CSS, the project focuses on performance, responsiveness, clean component architecture, and a premium Apple-inspired user experience.",
+          ],
+        },
+
+        {
+          id: 2,
+          name: "apple-3d.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://apple-psi-liard.vercel.app/",
+          position: "top-20 left-20",
+        },
+
+        {
+          id: 4,
+          name: "apple-3d.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 left-80",
+          imageUrl: "/images/app.png",
+        },
+
+        {
+          id: 5,
+          name: "Apple 3D Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://www.figma.com/",
+          position: "top-60 left-5",
+        },
+      ],
+    },
+
+    // ▶ Project 3
+    
+    {
+      id: 7,
+      name: "3D Interactive Portfolio",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 left-80",
+      windowPosition: "top-[33vh] left-7",
+
+      children: [
+        {
+          id: 1,
+          name: "3D Interactive Portfolio Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+
+          description: [
+            "My 3D Interactive Portfolio is a creative personal portfolio designed to showcase my projects, skills, experience, and development journey through an immersive web experience.",
+            "Instead of using a traditional portfolio layout, it combines modern UI with interactive 3D elements, animations, and engaging visual experiences.",
+            "The website allows visitors to explore my work, discover my skills, and interact with different sections of my portfolio in a more dynamic way.",
+            "The 3D experience is powered by Three.js and React Three Fiber, with interactive 3D models, camera controls, and immersive scenes.",
+            "Built with React, Tailwind CSS, GSAP, and React Three Fiber, the portfolio focuses on responsive design, smooth animations, performance, and a unique user experience.",
           ],
         },
 
@@ -324,8 +375,8 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "#",
-          position: "top-20 left-20",
+          href: "https://3-d-portfolio-flame-seven.vercel.app/",
+          position: "top-10 right-20",
         },
 
         {
@@ -334,76 +385,76 @@ const WORK_LOCATION = {
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          position: "top-52 right-80",
+          imageUrl: "/images/port.png",
         },
 
         {
           id: 5,
-          name: "Design.fig",
+          name: "Portfolio Design.fig",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
-          href: "#",
-          position: "top-60 left-5",
+          href: "https://www.figma.com/",
+          position: "top-60 right-20",
         },
       ],
     },
 
-
-    // ▶ Project 3
+    // ▶ Project 4 — Pokédex
     {
-      id: 7,
-      name: "Legal Metrology AI",
+      id: 8,
+      name: "Pokédex",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      position: "top-60 left-80",
+      windowPosition: "top-[33vh] left-60",
 
       children: [
         {
           id: 1,
-          name: "SIH26034 Project.txt",
+          name: "Pokédex Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
 
           description: [
-            "A software solution for checking compliance of packaged commodities under the Legal Metrology (Packaged Commodities) Rules, 2011.",
-            "The system is designed to scan product images and labels and extract important information from the packaging.",
-            "The extracted information can then be checked against required Legal Metrology rules.",
-            "The goal is to reduce manual inspection effort and provide a faster and more systematic compliance-checking process.",
+            "Pokédex is an interactive web application that lets users explore and discover Pokémon from across the Pokémon universe.",
+            "Users can browse Pokémon, search for their favorite characters, and view detailed information such as names, types, abilities, stats, and images.",
+            "The application uses the PokéAPI to fetch real-time Pokémon data and dynamically display it through a clean and responsive interface.",
+            "Built with React and Axios, the project demonstrates API integration, asynchronous data fetching, reusable components, and modern frontend development.",
+            "The interface is designed to make exploring Pokémon simple, interactive, and enjoyable across desktop and mobile devices.",
           ],
         },
 
         {
           id: 2,
-          name: "legal-metrology-ai.com",
+          name: "pokedex.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "#",
+          href: "YOUR_POKEDEX_LINK",
           position: "top-10 right-20",
         },
 
         {
           id: 4,
-          name: "legal-metrology.png",
+          name: "pokedex.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
+          imageUrl: "/images/pokemonpro.jpeg",
         },
 
         {
           id: 5,
-          name: "Design.fig",
+          name: "Pokédex Design.fig",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
-          href: "#",
+          href: "https://www.figma.com/",
           position: "top-60 right-20",
         },
       ],
@@ -411,20 +462,15 @@ const WORK_LOCATION = {
   ],
 };
 
-
-/* =========================================================
-   ABOUT ME
-========================================================= */
-
+// ▶ About Me
 const ABOUT_LOCATION = {
   id: 2,
   type: "about",
-  name: "About Me",
+  name: "About me",
   icon: "/icons/info.svg",
   kind: "folder",
 
   children: [
-
     {
       id: 1,
       name: "me.png",
@@ -432,7 +478,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/me.jpg",
+      imageUrl: "/images/my.png",
     },
 
     {
@@ -442,7 +488,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/me-2.jpg",
+      imageUrl: "/images/gallery6.jpeg",
     },
 
     {
@@ -452,7 +498,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/me-3.jpeg",
+      imageUrl: "/images/gallery3.jpeg",
     },
 
     {
@@ -463,29 +509,24 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
 
-      subtitle: "Meet Abdul Mannan",
+      subtitle: "Meet the Developer Behind the Code",
 
-      image: "/images/me.jpg",
+      image: "/images/gallery7.png",
 
       description: [
-        "Hey! I'm Abdul Mannan 👋, a Computer Science student and developer who enjoys building modern, interactive, and visually polished digital experiences.",
+        "Hey! I’m Abdul Mannan , a Computer Science student and developer who loves building interactive and visually engaging digital experiences.",
 
-        "I work with technologies such as HTML, CSS, JavaScript, React, Tailwind CSS, GSAP, and modern frontend tools.",
+        "I’m pursuing my B.Tech in Computer Science at AKGEC, Ghaziabad, and work mainly with JavaScript, React, Tailwind CSS, and modern frontend technologies.",
 
-        "I enjoy combining development with UI/UX design and Figma to create websites that are not only functional but also visually engaging.",
+        "I enjoy creating clean UI, smooth animations, responsive websites, and 3D experiences using tools like Three.js, React Three Fiber, and GSAP.",
 
-        "I'm also involved with the Open Source Software and Research & Development Centre (OSS/OSSR&DC), where I explore open source, development, and collaborative projects.",
+        "I’m also part of OSS R&D Centre, where I learn, collaborate, and explore open-source development.",
 
-        "Outside development, I enjoy design, video editing, cricket, and experimenting with new creative ideas.",
+        "Outside coding, I enjoy Figma, video editing, cricket, and experimenting with creative ideas.",
       ],
     },
   ],
 };
-
-
-/* =========================================================
-   RESUME
-========================================================= */
 
 const RESUME_LOCATION = {
   id: 3,
@@ -493,56 +534,47 @@ const RESUME_LOCATION = {
   name: "Resume",
   icon: "/icons/file.svg",
   kind: "folder",
-
   children: [
     {
       id: 1,
-      name: "Abdul-Mannan-Resume.pdf",
+      name: "Resume.pdf",
       icon: "/images/pdf.png",
       kind: "file",
       fileType: "pdf",
-
-      // Add your resume path here
-      // href: "/resume/Abdul-Mannan-Resume.pdf",
+      
+      // you can add `href` if you want to open a hosted resume
+      // href: "/your/resume/path.pdf",
     },
   ],
 };
-
-
-/* =========================================================
-   ARCHIVE / TRASH
-========================================================= */
 
 const TRASH_LOCATION = {
   id: 4,
   type: "trash",
-  name: "Archive",
+  name: "Trash",
   icon: "/icons/trash.svg",
   kind: "folder",
-
   children: [
     {
       id: 1,
-      name: "old-project.png",
+      name: "trash1.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-10 left-10",
-      imageUrl: "/images/trash-1.png",
+      imageUrl: "/images/del.png",
     },
-
     {
       id: 2,
-      name: "old-design.png",
+      name: "trash2.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-40 left-80",
-      imageUrl: "/images/trash-2.png",
+      imageUrl: "/images/del2.png",
     },
   ],
 };
-
 
 export const locations = {
   work: WORK_LOCATION,
@@ -551,64 +583,17 @@ export const locations = {
   trash: TRASH_LOCATION,
 };
 
-
-/* =========================================================
-   WINDOW CONFIG
-========================================================= */
-
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: {
-    isOpen: false,
-    zIndex: INITIAL_Z_INDEX,
-    data: null,
-  },
-
-  contact: {
-    isOpen: false,
-    zIndex: INITIAL_Z_INDEX,
-    data: null,
-  },
-
-  resume: {
-    isOpen: false,
-    zIndex: INITIAL_Z_INDEX,
-    data: null,
-  },
-
-  safari: {
-    isOpen: false,
-    zIndex: INITIAL_Z_INDEX,
-    data: null,
-  },
-
-  photos: {
-    isOpen: false,
-    zIndex: INITIAL_Z_INDEX,
-    data: null,
-  },
-
-  terminal: {
-    isOpen: false,
-    zIndex: INITIAL_Z_INDEX,
-    data: null,
-  },
-
-  txtfile: {
-    isOpen: false,
-    zIndex: INITIAL_Z_INDEX,
-    data: null,
-  },
-
-  imgfile: {
-    isOpen: false,
-    zIndex: INITIAL_Z_INDEX,
-    data: null,
-  },
+  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
-export {
-  INITIAL_Z_INDEX,
-  WINDOW_CONFIG,
-};
+export { INITIAL_Z_INDEX, WINDOW_CONFIG };

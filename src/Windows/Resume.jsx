@@ -16,7 +16,7 @@ const Resume = () => {
         </a>
     </div>
     <div className="">
-        <img src="/files/resume.jpg" className="object-cover" alt="" />
+        <img src="https://pngmagic.com/webp_images/Plain-white-background-image.webp" className="object-cover" alt="" />
     </div>
 
     </>
