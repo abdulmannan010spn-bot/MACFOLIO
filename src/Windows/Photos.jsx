@@ -1,8 +1,15 @@
 import WindowControls from "../Components/WindowControls";
 import { gallery } from "../Constants";
 import WindowWrapper from "../Hoc/WindowWrapper";
+import useWindowStore from "../Stores/Window";
 
 const Photos = () => {
+  const { openWindow } = useWindowStore();
+
+  const openImage = (item) => {
+    openWindow("imgfile", { name: `Photo ${item.id}`, imageUrl: item.img });
+  };
+
   return (
     <>
       <div id="window-header">
@@ -11,15 +18,15 @@ const Photos = () => {
       </div>
 
       <div className="p-5 space-y-5">
-        <h2 className="font-medium text-lg">Open Source Software Research & Development Centre </h2>
-        <p>Snapshots from Team OSS organizing events, collaborating with the team.</p>
+        <h3>A Few Moments</h3>
+        <p>Some snapshots from behind the screen.</p>
 
         <ul className="grid grid-cols-3 gap-3">
-          {gallery.map(({ id, img }) => (
-            <li key={id}>
+          {gallery.map((item) => (
+            <li key={item.id} onClick={() => openImage(item)} className="cursor-pointer">
               <img
-                src={img}
-                alt={`Gallery photo ${id}`}
+                src={item.img}
+                alt={`Gallery photo ${item.id}`}
                 className="w-full aspect-square object-cover rounded-lg"
               />
             </li>
@@ -30,6 +37,6 @@ const Photos = () => {
   );
 };
 
-const PhotosWindow = WindowWrapper(Photos, "photos", { top: "5%" });
+const PhotosWindow = WindowWrapper(Photos, "photos", { top: "25%" });
 
 export default PhotosWindow;
