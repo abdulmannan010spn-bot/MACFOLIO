@@ -1,3 +1,4 @@
+import { useState } from "react"
 import gsap from "gsap"
 import Dock from "./Components/Dock"
 import Navbar from "./Components/Navbar"
@@ -13,14 +14,17 @@ import Contact from "./Windows/Contact"
 import Home from "./Components/Home"
 import MobileBlocker from "./Components/MobileBlocker"
 import Photos from "./Windows/Photos"
-
+import Intro from "./Components/Intro"
 
 gsap.registerPlugin(Draggable)
 
 const App = () => {
+  const [introDone, setIntroDone] = useState(false)
+
   return (
     <main>
-      
+      {!introDone && <Intro onComplete={() => setIntroDone(true)} />}
+
       <MobileBlocker />
       <Navbar />
       <Window />
