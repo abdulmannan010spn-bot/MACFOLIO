@@ -18,12 +18,20 @@ const Photos = () => {
       </div>
 
       <div className="p-5 space-y-5">
-        <h3>A Few Moments</h3>
-        <p>Some snapshots from behind the screen.</p>
+        <h3 className="font-medium text-lg">
+          Open Source Software Research & Development Centre
+        </h3>
+        <p>
+          Snapshots from OSS — organizing events, collaborating with the team.
+        </p>
 
         <ul className="grid grid-cols-3 gap-3">
           {gallery.map((item) => (
-            <li key={item.id} onClick={() => openImage(item)} className="cursor-pointer">
+            <li
+              key={item.id}
+              onClick={() => openImage(item)}
+              className="cursor-pointer"
+            >
               <img
                 src={item.img}
                 alt={`Gallery photo ${item.id}`}
@@ -37,6 +45,6 @@ const Photos = () => {
   );
 };
 
-const PhotosWindow = WindowWrapper(Photos, "photos", { top: "25%" });
+const PhotosWindow = WindowWrapper(Photos, "photos", { top: "5%" });
 
 export default PhotosWindow;
