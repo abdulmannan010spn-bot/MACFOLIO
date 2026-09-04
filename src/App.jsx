@@ -12,6 +12,8 @@ import ImagesContent from "./Windows/ImagesContent"
 import Contact from "./Windows/Contact"
 import Home from "./Components/Home"
 import MobileBlocker from "./Components/MobileBlocker"
+import Photos from "./Windows/Photos"
+
 
 gsap.registerPlugin(Draggable)
 
@@ -30,6 +32,7 @@ const App = () => {
       <Text />
       <ImagesContent />
       <Contact />
+      <Photos />
       <Home />
     </main>
   )
