@@ -434,7 +434,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "YOUR_POKEDEX_LINK",
+          href: "https://pokedex-three-opal.vercel.app/",
           position: "top-10 right-20",
         },
 
@@ -542,8 +542,6 @@ const RESUME_LOCATION = {
       kind: "file",
       fileType: "pdf",
       
-      // you can add `href` if you want to open a hosted resume
-      // href: "/your/resume/path.pdf",
     },
   ],
 };
