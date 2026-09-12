@@ -2,7 +2,12 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const greetings = ["Hello", "नमस्ते", "السلام عليكم", "ਸਤ ਸ੍ਰੀ ਅਕਾਲ"];
+const greetings = [
+  { text: "Hello", font: "font-[Playwrite_US_Trad]", dir: "ltr" },
+  { text: "नमस्ते", font: "font-[Poppins]", dir: "ltr" },
+  { text: "السلام عليكم", font: "font-[Noto_Sans_Arabic]", dir: "rtl" },
+  { text: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", font: "font-[Noto_Sans_Gurmukhi]", dir: "ltr" },
+];
 
 const Intro = ({ onComplete }) => {
   const containerRef = useRef(null);
@@ -43,10 +48,12 @@ const Intro = ({ onComplete }) => {
           y: -20,
           duration: 0.3,
           ease: "power2.in",
-          delay: 0.1, // how long each greeting stays visible
+          delay: 0.1,
         });
     });
   }, []);
+
+  const current = greetings[index];
 
   return (
     <div
@@ -55,9 +62,10 @@ const Intro = ({ onComplete }) => {
     >
       <h1
         ref={textRef}
-        className="text-black text-9xl font-bold font-[Playwrite_US_Trad]"
+        dir={current.dir}
+        className={`text-black text-9xl font-bold ${current.font}`}
       >
-        {greetings[index]}
+        {current.text}
       </h1>
     </div>
   );
