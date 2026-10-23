@@ -24,7 +24,7 @@ const Intro = ({ onComplete }) => {
     >
       <AppleHelloEnglishEffect
         speed={1.1}
-        className="h-32 md:h-48 text-black"
+        className="h-32 md:h-48 text-white"
         onAnimationComplete={handleHelloComplete}
       />
     </div>
