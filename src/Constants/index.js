@@ -131,32 +131,33 @@ const socials = [
   {
     id: 1,
     text: "Github",
-    icon: "https://api.iconify.design/mdi:github.svg?color=white",
+    icon: "https://cdn.simpleicons.org/github/white",
     bg: "#f4656b",
     link: "https://github.com/abdulmannan010spn-bot",
   },
   {
     id: 2,
     text: "Instagram",
-    icon: "https://api.iconify.design/mdi:instagram.svg?color=white",
+    icon: "https://cdn.simpleicons.org/instagram/white",
     bg: "#4bcb63",
     link: "https://www.instagram.com/mai_mannan_hoon",
   },
   {
     id: 3,
     text: "LeetCode",
-    icon: "https://api.iconify.design/simple-icons:leetcode.svg?color=white",
+    icon: "https://cdn.simpleicons.org/leetcode/white",
     bg: "#ff866b",
     link: "https://leetcode.com/u/MAI_MANNAN_HOON_10/",
   },
   {
     id: 4,
     text: "LinkedIn",
-    icon: "https://api.iconify.design/mdi:linkedin.svg?color=white",
+    icon: "https://api.iconify.design/bi/linkedin.svg?color=white",
     bg: "#05b6f6",
     link: "https://www.linkedin.com/in/abdul-mannan-537494375",
   },
 ];
+
 const photosLinks = [
   {
     id: 1,
